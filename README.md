@@ -1,6 +1,6 @@
 # Sparkify Data Warehouse and ETL Pipeline
 
-Creates tables in a Postgres database to enable optimized queries for analyses of a song plays for a streaming app. 
+Creates tables in a Postgres database to enable optimized queries for analyses of a song plays for a music streaming app. 
 
 Data from this music streaming app currently resides in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app. 
 
