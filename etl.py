@@ -6,6 +6,15 @@ from sql_queries import *
 
 
 def process_song_file(cur, filepath):
+    """
+    This procedure processes a song file whose filepath has been provided as an arugment.
+    It extracts the song information in order to store it into the songs table.
+    Then it extracts the artist information in order to store it into the artists table.
+
+    INPUTS: 
+    * cur the cursor variable
+    * filepath the file path to the song file
+    """
     # open song file
     df = pd.read_json(filepath, lines=True)
 
@@ -20,6 +29,15 @@ def process_song_file(cur, filepath):
 
 
 def process_log_file(cur, filepath):
+    """
+    This procedure processes a log file whose filepath has been provided as an arugment.
+    It extracts the log information in order to split and store log data into the time table, 
+    user table and songplay table.
+
+    INPUTS: 
+    * cur the cursor variable
+    * filepath the file path to the log file
+    """
     # open log file
     df = pd.read_json(filepath,lines=True)
 
@@ -30,8 +48,6 @@ def process_log_file(cur, filepath):
     t = pd.to_datetime(df.ts, unit='ms')
     
     # insert time data records
-    # time_data = 
-    # column_labels = 
     start_time = t.dt.time.rename("start_time")
     hour = t.dt.hour.rename("hour")
     day = t.dt.day.rename("day")
@@ -80,6 +96,16 @@ def process_log_file(cur, filepath):
 
 
 def process_data(cur, conn, filepath, func):
+    """
+    This procedure executes a function on all json files in a specified directory.
+    The function will extract and store specific information into tables.
+    
+    INPUTS: 
+    * cur the cursor variable
+    * conn the database connection variable
+    * filepath the file path to the log file
+    * func the function to be executed
+    """
     # get all files matching extension from directory
     all_files = []
     for root, dirs, files in os.walk(filepath):
