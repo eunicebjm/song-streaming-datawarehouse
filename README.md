@@ -1,4 +1,4 @@
-# Sparkify Data Warehouse and ETL Pipeline
+# Building a Data Warehouse and ETL Pipeline for a Music Steaming App
 
 Creates tables in a Postgres database to enable optimized queries for analyses of a song plays for a music streaming app. 
 
