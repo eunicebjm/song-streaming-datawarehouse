@@ -42,7 +42,6 @@ Description of Jupyter Notebooks:
 
 * `data_exploration.ipnyb` explores the JSON data collected from Sparkify.
 * `test.ipnyb` displays the first few rows of each table to let you check your database.
-* `etl.ipnyb` reads and processes a single file from song_data and log_data and loads the data into your tables. This notebook contains detailed instructions on the ETL process for each of the tables.
 
 
 ## Authors
