@@ -33,11 +33,6 @@ sql_queries.py
 ```
 Contains all the sql queries, and is imported into the deployment files above.
 
-```
-*.ipnyb 
-```
-Exploratory and planning stage files which can be ignored during the Postgres database and ETL pipeline deployment.
-
 Description of Jupyter Notebooks:
 
 * `data_exploration.ipnyb` explores the JSON data collected from Sparkify.
